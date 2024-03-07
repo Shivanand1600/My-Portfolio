@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+  background-color: #f9f7f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  transition: all 0.5s linear;
+}
+
+body #mainSection {
+  width: 100%;
+  color: black;
+  background-image: url(./images/backgroundImg1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  transition: all 0.5s linear;
+  box-shadow:10px 10px 10px black;
+}
+
+.dark-mode {
+  color: #fff !important;
+  background-color: #0a0908 !important;
+}
+
+.light-mode {
+  color: black !important;
+  background-color: #f9f7f3 !important;
+}
+
+
+/* NAVBAR */
+
+#navbar {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: top 0.3s;
+  z-index: 1;
+}
+
+.nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ 
+}
+
+.block {}
+
+#leftBlock {
+  height: 80%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+#leftBlock h1 {
+  position: relative;
+  left: 220px;
+}
+
+#rightBlock {
+  height: 80%;
+  width: 65%;
+  display: flex;
+}
+
+#rightBlock .navButtons {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+/* NAV-MIDDLE-BUTTONS */
+
+.navBtns {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 17px;
+  padding: 0.8em 1.5em;
+  font-weight: 500;
+  background-color: transparent;
+  color: black;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0.6em;
+  margin-top: -0.25em;
+}
+
+.label {
+  position: relative;
+  top: -1px;
+}
+
+.transition {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: rgba(16, 185, 129, 0.6);
+  border-radius: 9999px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button:hover .transition {
+  width: 9em;
+  height: 3em;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* NAV-RESUME-BTN */
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  cursor: pointer;
+  color: black;
+  z-index: 1;
+  transition: all 0.5s linear;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: transparent;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #39bda7;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:hover {
+  color: #ffffff;
+  border: 1px solid #39bda7;
+}
+
+.button:hover:before {
+  top: -35%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button:hover:after {
+  top: -45%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/* TOGGLE-SWITCH */
+.toggle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+}
+
+#toogleOuter {
+  height: 35px;
+  width: 70px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  background-image: url(./images/clouds.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: all 0.3s linear;
+}
+
+#toogleOuter #toggleMid {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: relative;
+  left: 2px;
+  background-image: url(./images/sun.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s linear;
+}
+
+
+/* MAIN-HOME-SECTION */
+
+#main {
+  height: 550px;
+  width: 100%;
+  background-color: transparent;
+}
+
+#main .home {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+#main .home .mainBlock {
+  height: 60%;
+  width: 50%;
+  position: relative;
+  top: -20px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #39bda7; */
+}
+#main .home .mainBlock .heading1{
+  display: flex;
+  font-size: 25px;
+  font-weight: 150;
+}
+#main .home .mainBlock .heading1 #hand{
+  height: 20px;
+  width: 20px;
+  animation: handShake 0.5s linear infinite;
+}
+@keyframes handShake {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-40deg);
+  }
+}
+
+#main .home .mainBlock .name{
+  margin-top: 10px;
+  font-size: 110px;
+  padding: 20px 0px 0px 0px;
+}
+#main .home .mainBlock .friend{
+  font-size: 25px;
+  font-weight: 400;
+  position: relative;
+  right: 80px;
+  top: 10px;
+}
+
+
+/* SOCIALS-CONTAINER */
+
+.socialBox{
+  position: relative;
+  top: 30px;
+  right: 40px;
+  transform: rotate(3deg);
+}
+.socialCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .8s;
+  border-radius: 50%;
+}
+
+/* instagram*/
+
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -5px -5px 30px rgb(253, 252, 252);
+}
+
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -5px -5px 30px rgb(253, 252, 252);
+}
+
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -5px -5px 30px rgb(253, 252, 252);
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -5px -5px 30px rgb(253, 252, 252);
+}
+.containerFive:hover {
+  background-color: #000;
+  transition-duration: .3s;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -5px -5px 30px rgb(253, 252, 252);
+}
+.containerFive svg{
+  color: black;
+}
+.containerFive svg:hover{
+  color: white;
+}
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 25px;
+  font-size: 500;
+}
+
+.socialSvg path {
+  fill: black;
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+.about{
+  height: 600px;
+  width: 100%;
+  margin-top: 50px;
+}
