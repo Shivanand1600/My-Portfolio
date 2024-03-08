@@ -59,7 +59,7 @@ body #mainSection {
   z-index: 1;
 }
 
-.nav {
+#nav {
   height: 100%;
   width: 100%;
   display: flex;
@@ -168,14 +168,13 @@ button:active {
 }
 
 .button:before {
-  content: "";
+  background-color: transparent;
   position: absolute;
   left: 50%;
   transform: translateX(-50%) scaleY(1) scaleX(1.25);
   top: 100%;
   width: 140%;
   height: 180%;
-  background-color: transparent;
   border-radius: 50%;
   display: block;
   transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -198,7 +197,7 @@ button:active {
 }
 
 .button:hover {
-  color: #ffffff;
+  color: #ffff;
   border: 1px solid #39bda7;
 }
 
@@ -303,13 +302,15 @@ button:active {
   padding: 20px 0px 0px 0px;
   color: black;
 }
-#main .home .mainBlock .friend{
+#main .home .mainBlock #friend{
+  height: 350px;
+  width: 500px;
   color: black;
   font-size: 25px;
-  font-weight: 400;
-  position: relative;
-  right: 80px;
-  top: 10px;
+  font-weight: 500;
+  position: absolute;
+  right: 0px;
+  top: 250px;
 }
 
 
@@ -515,4 +516,286 @@ justify-content: center;
     display: flex;
     font-weight: 300;
     margin-left: 10px;
+  }
+
+
+  /* WHAT-I-CAN-DO */
+
+  .whatCanIDo{
+    height: 600px;
+    width: 100%;
+    position: relative;
+    top: 130px;
+  }
+  .whatCanIDo .whatDo{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .whatCanIDo .whatDo .txt1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .whatCanIDo .whatDo .txt1 #headTxt1 {
+    font-size: 50px;
+    font-weight: 300;
+  }
+  .whatCanIDo .whatDo .txt1 #headTxt2{
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  .section1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+  .section1 .row{
+    height: 45%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    overflow: visible;
+    width: 250px;
+    height: 210px;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+    border-radius: 5px;
+  }
+  .card.flipped .content {
+    transform: rotateY(180deg);
+  }
+  .front,
+  .back {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .back {
+    width: 100%;
+    height: 100%;
+  }
+  .back-content {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .back-content .app p{
+    margin-top: 15px;
+    font-weight: 400;
+  }
+  .front {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .front .keyPoints{  
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    border-bottom: 1px solid;
+  }
+  .front .keyPoints p{
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .front .softHead{
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  /* FRONT-PAGE-HIRE-ME-BUTTON */
+  button {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #000;
+    text-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #000;
+    transition: 0.5s ease;
+    user-select: none;
+    margin-top: 10PX;
+  }
+  
+  #btn:hover,
+  :focus {
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+      0 0 100px #008cff;
+  }
+  
+
+
+  /* PROJECTS-SECTION */
+
+  .project-section{
+    position: relative;
+    top: 250px;
+    height: 500px;
+    width: 100%;
+  }
+  .projects{
+    height: 100%;
+    width: 100%;
+  }
+  .project-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #projectTxt1 {
+    font-size: 50px;
+    font-weight: 300;
+  }
+  #projectTxt2{
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .pro-sec1{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .proRow{
+    height: 45%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .proRow a{
+    text-decoration: none;
+  }
+
+  /* PROJECT-CARD */
+
+  .proCard {
+    width: 395px;
+    height: 240px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .proCard .img {
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+  }
+  
+  .textBox {
+    width: 80%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .textBox > .text {
+    font-weight: 800;
+  }
+  
+  .textBox > .head {
+    font-size: 22px;
+    color: black;
+  }
+  
+  .textBox > .price {
+    font-size: 17px;
+  }
+  
+  .textBox > #port-about {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  
+  .proCard:hover > .textBox {
+    opacity: 1;
+    color: #fff;
+  }
+  
+  .proCard:hover > .img {
+    filter: blur(10px);
+  }
+  .proCard:hover {
+    transform: scale(1.04) rotate(-1deg);
+  }
+  
+  /* FOOTER */
+
+  #footer{
+    position: relative;
+    top: 200px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  #footer span{
+    color: #00acee;
   }
