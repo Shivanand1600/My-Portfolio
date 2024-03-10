@@ -52,23 +52,17 @@ body #mainSection {
 #navbar {
   height: 60px;
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: top 0.3s;
-  z-index: 1;
 }
 
 #nav {
-  height: 100%;
+  height: 60px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
- 
+  position: fixed;
+  z-index:3 ;
 }
-
-.block {}
 
 #leftBlock {
   height: 80%;
@@ -77,9 +71,13 @@ body #mainSection {
   align-items: center;
 }
 
-#leftBlock h1 {
+#leftBlock #navLogo {
   position: relative;
   left: 220px;
+}
+.slide-left {
+  transition: all 0.3s;
+  transform: translateX(-100%); /* Move the element to the left */
 }
 
 #rightBlock {
@@ -141,12 +139,12 @@ body #mainSection {
   transform: translate(-50%, -50%);
 }
 
-button:hover .transition {
+.navBtns:hover .transition {
   width: 9em;
   height: 3em;
 }
 
-button:active {
+.navBtns:active {
   transform: scale(0.97);
 }
 
@@ -251,7 +249,7 @@ button:active {
 /* MAIN-HOME-SECTION */
 
 #main {
-  height: 550px;
+  height: 500px;
   width: 100%;
   background-color: transparent;
 }
@@ -268,7 +266,7 @@ button:active {
   height: 60%;
   width: 50%;
   position: relative;
-  top: -20px;
+  top: -35px;
   right: 0px;
   display: flex;
   flex-direction: column;
@@ -297,7 +295,6 @@ button:active {
 }
 
 #main .home .mainBlock .name{
-  margin-top: 10px;
   font-size: 110px;
   padding: 20px 0px 0px 0px;
   color: black;
@@ -310,7 +307,7 @@ button:active {
   font-weight: 500;
   position: absolute;
   right: 0px;
-  top: 250px;
+  top: 230px;
 }
 
 
@@ -610,6 +607,7 @@ justify-content: center;
   .back {
     width: 100%;
     height: 100%;
+    background-color: transparent;
   }
   .back-content {
     position: absolute;
@@ -633,12 +631,14 @@ justify-content: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
   }
   .front .keyPoints{  
-    width: 230px;
+    width: 200px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:first baseline;
+    justify-content: left;
     margin-top: 10px;
     border-bottom: 1px solid;
   }
@@ -652,7 +652,7 @@ justify-content: center;
   }
 
   /* FRONT-PAGE-HIRE-ME-BUTTON */
-  button {
+  #hireBtn {
     padding: 10px 20px;
     text-transform: uppercase;
     border-radius: 8px;
@@ -669,14 +669,14 @@ justify-content: center;
     margin-top: 10PX;
   }
   
-  #btn:hover,
-  :focus {
+ .front #hireBtn:hover
+   {
     color: #ffffff;
-    background: #008cff;
-    border: 1px solid #008cff;
+    background: rgba(16, 185, 129, 0.6);
+    border: 1px solid rgba(16, 185, 129, 0.6);
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
-      0 0 100px #008cff;
+    box-shadow: 0 0 5px rgba(16, 185, 129, 0.6), 0 0 20px rgba(16, 185, 129, 0.6), 0 0 50px rgba(16, 185, 129, 0.6),
+      0 0 100px rgba(16, 185, 129, 0.6);
   }
   
 
